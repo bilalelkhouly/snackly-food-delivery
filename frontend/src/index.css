@@ -1,0 +1,117 @@
+@font-face {
+  font-family: 'lausanne';
+  src: url('./fonts/TWKLausanne-200.woff2') format('woff2');
+  font-weight: 200; /* Extra Light weight */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+    font-family: 'lausanne';
+    src: url(./fonts/TWKLausanne-400.woff2) format('woff2');
+    font-weight: 400; /* Normal weight */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'lausanne';
+    src: url('./fonts/TWKLausanne-600.woff2') format('woff2');
+    font-weight: 600; /* Medium weight */
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'lausanne';
+    src: url('./fonts/TWKLausanne-900.woff2') format('woff2');
+    font-weight: 900; /* Semi-bold weight */
+    font-style: normal;
+  }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn {
+    @apply bg-transparent text-base text-[#49557e] border border-tomato border-solid py-2.5 px-[30px] cursor-pointer rounded-full;
+  }
+
+  .active-nav {
+    @apply pb-[2px] border-b-2 border-[#49557E]
+  }
+
+  .active-menu {
+    @apply border-solid border-4 border-tomato p-0.5
+  }
+
+  .view-menu-btn {
+    @apply border-none text-[#747474] text-view_menu_btn py-[1vw] px-[2.3vw] bg-white rounded-[50px]
+  }
+
+  .login-popup-inputs {
+    @apply outline-none border-[1px] border-solid border-[#c9c9c9] p-2.5 rounded
+  }
+
+  .login-popup-span {
+    @apply text-tomato font-medium cursor-pointer hover:text-[#FFA08F]
+  }
+
+  .cart-items-title {
+    @apply grid grid-cols-card-items-grid items-center text-[#808080] text-cart-items
+  }
+
+  .cart-total-details {
+    @apply flex justify-between text-[#555]
+  }
+
+  .dot {
+    @apply absolute min-w-2.5 min-h-2.5 bg-tomato rounded-[5px] top-[-8px] right-[-8px]
+  }
+
+  .place-order-left input {
+    @apply mb-4 w-full p-2.5 border-[1px] border-solid border-[#c5c5c5] rounded-md outline-tomato
+  }
+
+  .multi-fields {
+    @apply flex gap-2.5
+  }
+
+  .profile-dropdown {
+    @apply absolute right-0 z-[1] flex flex-col justify-center gap-2.5 bg-[#fff2ef] py-3 px-6 rounded-[4px] border-[1px] border-solid border-tomato outline-2 outline outline-white list-none 
+  }
+
+  .show-dropdown {
+    @apply flex justify-center
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.app {
+  width: 80%;
+  margin: auto;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+  animation-duration: 1s;
+}
+
